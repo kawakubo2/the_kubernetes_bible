@@ -1,0 +1,17 @@
+# ~/pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-hostpath-pvc
+spec:
+  # 参考書にはないが、createしようとすると怒られるの追加した
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  selector:
+    matchLabels:
+      type: hostpath
+      env: prod
+

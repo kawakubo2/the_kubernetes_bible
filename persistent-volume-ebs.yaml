@@ -1,0 +1,14 @@
+# ~/persistent-volume-ebs.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: persistent-volume-ebs
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+  - ReadWriteOnce
+  awsElasticBlockStore:
+    volumeId: vol-xxxx
+    fsType: ext4
+

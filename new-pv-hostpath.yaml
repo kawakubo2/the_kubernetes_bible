@@ -1,0 +1,13 @@
+# ~/new-pv-hostpath.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: new-pv-hostpath
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: "/home/tomoharu/mykubernetes/data"
+

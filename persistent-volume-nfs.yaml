@@ -1,0 +1,15 @@
+# ~/persistent-volume-nfs.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: persistent-volume-nfs
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+  - ReadWriteMany
+  nfs:
+    path: /opt/nfs
+    server: nfsxxxx
+    type: ext4
+
